@@ -2,7 +2,9 @@
 
 ## What is in the archive and how to unarchive it?
 
-* The archive contains the files needed to deploy awesome website. Unachive it by running `unzip awesome-website.zip`  It is created when a tag is added to Github repository
+* The archive contains the files needed to deploy awesome website.
+Unachive it by running `unzip awesome-website.zip`
+It is created when a tag is added to Github repository
 
 ## What are the commands to start and stop the application?
 
