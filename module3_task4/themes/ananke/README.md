@@ -1,4 +1,4 @@
-# Ananke, A theme for [Hugo](https://gohugo.io/), a framework for building websites.
+# Ananke, A theme for [Hugo](https://gohugo.io/), a framework for building websites
 
 The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
 
@@ -42,25 +42,24 @@ Also includes examples of Hugo Features or Functions:
 - `ge` (greater than or equal to)
 - `.Site.Params.mainSections` to avoid hard-coding "blog," etc. [[release note](https://github.com/gohugoio/hugo/blob/66ec6305f6cb450ddf9c489854146bac02f7dca1/docs/content/meta/release-notes.md#enhancements)]
 
-
 This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](https://tachyons.io/).
-
-
 
 ## Installation
 
 ### As a Hugo Module (recommended)
 
 > ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
+>
 > ```
 > $ go version
 > ```
->  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/). 
+>
+> Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/).
 
 1. From your project's root directory, initiate the hugo module system if you haven't already:
 
    ```
-   $ hugo mod init github.com/<your_user>/<your_project>
+   hugo mod init github.com/<your_user>/<your_project>
    ```
 
 2. Add the theme's repo to your `config.toml`:
@@ -74,16 +73,14 @@ This theme uses the "Tachyons" CSS library. This will allow you to manipulate th
 Inside the folder of your Hugo site run:
 
 ```
-$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
+git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
 ```
+
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
-
-
 
 ## Getting started
 
 After installing the theme successfully it requires a just a few more steps to get your site running.
-
 
 ### The config file
 
@@ -91,13 +88,13 @@ Take a look inside the [`exampleSite`](https://github.com/theNewDynamic/gohugo-t
 
 You may need to delete the line: `themesDir = "../.."`
 
-
 ### Add comments
 
 To enable comments, add following to your config file:
 
 - DISQUS: `disqusShortname = YOURSHORTNAME`
 - COMMENTO:
+
   ```
   [params]
     commentoEnable = true
@@ -108,16 +105,16 @@ To enable comments, add following to your config file:
 For any page or post you can add a featured image by including the local path in front matter (see content in the `exampleSite/content/_readme.md` file for examples): `featured_image: '/images/gohugo-default-sample-hero-image.jpg'`
 
 #### Featured image as Page Resources
-If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath incudes either `cover` or `feature` 
+
+If user is using [Page Resources](https://gohugo.io/content-management/page-resources/), the theme will try and match the `featured_image` from with a page resource of type `image` and use its relative permalink. If no `featured_image` is set, the theme will look for a Page Resource of type `image` whose filepath incudes either `cover` or `feature`
 
 #### Other hero settings
+
 If you would like to hide the header text on the featured image on a page, set `omit_header_text` to `true`. See `exampleSite/content/contact.md` for an example.
 
 You don't need an image though. The default background color is black, but you can change the color, by changing the default color class in the config.toml file. Choose a background color from any on the [Tachyons](https://tachyons.io/docs/themes/skins/) library site, and preface it with "bg-"
 
 example: `background_color_class = "bg-blue"` or `background_color_class = "bg-gray"`
-
-
 
 ### Activate the contact form
 
@@ -144,6 +141,7 @@ languages:
     params:
        read_more_copy: En savoir plus à ce sujet
 ```
+
 Using front matter and cascade, this can be customized for a whole section, or just for one page.
 
 ```
@@ -156,11 +154,13 @@ Using front matter and cascade, this can be customized for a whole section, or j
 
 The theme automatically adds "Follow" link icons to the header and footer and "Share" link icons to pages unless `disable_share` parameter is set to true either on the site level (site params) or page level (front matter). Each built-in services sports a label, an icon and a color.
 
-In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a 
+In order to register a service to be used, user must add an `ananke_socials` parameter to its project configuration file and list them through it in the desired order. Each entry must bear a
+
 - name*: It matches the built-in service reference (Ex: twitter, github)
-- url*: The url of the handle's profile on the service (Ex: https://twitter.com/theNewDynamic, https://github.com/
+- url*: The url of the handle's profile on the service (Ex: <https://twitter.com/theNewDynamic>, <https://github.com/>
 theNewDynamic)
 - rel: (default: `noopener`) Controls the `rel` attribute of the "follow" link. Useful for Mastodon verification which requires a `rel="me"` on the link.
+
 ```yaml
 params:
   ananke_socials:
@@ -174,6 +174,7 @@ params:
 ```
 
 If user needs to overwrite default `color` and `label` of the service, they simply need to append the following to the entry:
+
 - label: The displayed name of the service to be used to popuplate `[title]` attributes and read-only. (Ex: Twitter, GitHub)
 - color: Used for styling purposes. (Ex: '#1da1f2', '#6cc644')
 
@@ -210,6 +211,7 @@ On top of easily customizing the built-in services' label and color, user can ov
 For example, in order to use your own GitHub icon, simply add an svg file at `/assets/ananke/socials/github.svg`
 
 #### Built-in Services
+
 Here is the list of built-in services. Those marked with an `*` are also part of the "Share" module.
 
 - twitter*
@@ -255,9 +257,7 @@ You can find a list of available typefaces [here](https://github.com/tachyons-cs
 
 And a list of background colors [here](https://github.com/tachyons-css/tachyons/blob/v4.7.0/src/_skins.css#L96).
 
-
 _n.b. in future versions we will likely separate the typeface and other body classes._
-
 
 ### CSS
 
@@ -269,10 +269,10 @@ Ananke uses [Tachyon.io](https://tachyons.io/) utility class library.
 
 WARNING: Pending resolution of this [discussion](https://github.com/theNewDynamic/gohugo-theme-ananke/discussions/452#discussioncomment-1865301), Custom CSS only works with Hugo Extended
 
-In order to complement the default CSS with your own, you can add custom css files to the project. 
+In order to complement the default CSS with your own, you can add custom css files to the project.
 
 1. Just add a `assets/ananke/css` directory to your project and add the file(s) in it.
-2. Register the files using the `custom_css` key in your site's parameter. The path referenced in the parameter should be relative to the `assets/ananke/css` folder. 
+2. Register the files using the `custom_css` key in your site's parameter. The path referenced in the parameter should be relative to the `assets/ananke/css` folder.
 
 The css files will be added in their registered order to final `main.css` file.
 
@@ -282,6 +282,7 @@ For example, if your css files are `assets/ananke/css/custom.css` and `assets/an
   [params]
     custom_css = ["custom.css","special.css"]
 ```
+
 __IMPORTANT__: Files registered through the `custom_css` array, while unlimited in number, must be of the same type (Ex: all `scss` or all `css`)
 
 __Note on retrocompatibiliy for custom css__: If the files registered through the `custom_css` setting are not found in `assets/ananke/css` the theme will expect them to live at the given path relative to the static directory and load them as <link> requests.
@@ -290,11 +291,9 @@ __Note on retrocompatibiliy for custom css__: If the files registered through th
 
 If you add a key of `show_reading_time` true to either the Config Params, a page or section's front matter, articles will show the reading time and word count.
 
-
 ### Adding Scripts to the Page Head
 
 Some scripts need to be added within the page head. To add your own scripts to the page head, simply insert them into the `head-additions.html` partial located in the `layouts/partials` folder.
-
 
 ### Logo
 
@@ -311,6 +310,7 @@ You can set the font color of the main content both globally and on individual p
 
 Globally:
 Set the `text_color` param in the `config.toml` file.
+
 ```
 [params]
   text_color = "green"
@@ -321,7 +321,6 @@ Set the `text_color` param in a page's markdown file front matter.
 
 note: The value of `text_color` must be a valid tachyons color class. A list can be found [here](https://tachyons.io/docs/themes/skins/).
 
-
 ### Localize date format
 
 Dates of blog posts and single pages are rendered with the default date format commonly used in the USA and Canada. It is possible to specify a different format.
@@ -331,9 +330,8 @@ Dates of blog posts and single pages are rendered with the default date format c
   date_format = "2. January 2006"
 ```
 
-With hugo 0.87.0 and above, you can also use predefined layout, like `:date_full`, and it will output localized dates or times. 
+With hugo 0.87.0 and above, you can also use predefined layout, like `:date_full`, and it will output localized dates or times.
 See hugo's documentation of the [`time.Format` function](https://gohugo.io/functions/dateformat/) for more details.
-
 
 ### Nearly finished
 
@@ -361,9 +359,6 @@ hugo
 ## Contributing
 
 If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
-
-
-
 
 TODO:
 
