@@ -6,10 +6,6 @@ Project for DevOps on Holberton School
 
 GoHugo on extended version - v0.84 or above make - v3.81 or above
 
-## Build Workflow
-
-Does static linting and build both website and API binary
-
 ## Lifecycle
 
 build: Generate the website from the markdown and configuration
@@ -31,3 +27,7 @@ check: Markdown linting on syntax and dead links
 validate: should validate the file ./dist/index.html by using the
 command line Holberton’s W3C Validator
 help: Shows this help message
+
+## Build Workflow
+
+Does static linting and build both website and API binary
