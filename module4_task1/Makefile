@@ -11,7 +11,7 @@ build: ## Generate the website from the markdown and configuration files in the 
 	@make check
 	@make lint
 	@make go-build
-	@make hugo-build
+	-@make hugo-build
 
 clean: ## Cleanup the content of the directory dist/, the binary awesome-api and the log file awesome-api.log
 	-@make stop

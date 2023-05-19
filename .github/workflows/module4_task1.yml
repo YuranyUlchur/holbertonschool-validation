@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Check out repository code
         uses: actions/checkout@v3
-      - run: cd module4_task1 && make docker-build
+      - run: cd module4_task1 && make build-docker
       - run: cd module4_task1 && make build
       - run: cd module4_task1 && make unit-tests
       - run: cd module4_task1 && make integration-tests
