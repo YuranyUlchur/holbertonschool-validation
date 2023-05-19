@@ -1,4 +1,4 @@
-docker-build: ## Generates the right Docker image to work with the project
+build-docker: ## Generates the right Docker image to work with the project
 	docker build -t awesome:build ./.build
 
 go-build: ## Generates the API binary from golang files
